@@ -311,12 +311,13 @@ function getFileName(name: string, side: ScriptSide) {
             break;
     }
     let fileName: string;
-    if (vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix_type"))
-        fileName = vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix") + name +
-            "." + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_extension", "lua");
-    else
-        fileName = name + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix") +
-            "." + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_extension", "lua");
+    fileName = vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix") + "." + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_extension", "lua");
+    // if (vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix_type"))
+    //     fileName = vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix") + name +
+    //         "." + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_extension", "lua");
+    // else
+    //     fileName = name + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_prefix") +
+    //         "." + vscode.workspace.getConfiguration("mtalua-generate").get(sideStr + "_extension", "lua");
 
     return fileName;
 }
