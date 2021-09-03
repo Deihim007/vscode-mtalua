@@ -1,5 +1,5 @@
 {
-    "name": "mtasa-lua",
+    "name": "mtasa-lua-custom",
     "displayName": "MTA:SA Lua",
     "description": "MTA:SA Lua Syntax Highlighting + Companion (MTALua => Lua)",
     "version": "2.4.0-custom",
