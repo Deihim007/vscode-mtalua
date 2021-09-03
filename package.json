@@ -1,8 +1,8 @@
 {
     "name": "mtasa-lua",
     "displayName": "MTA:SA Lua",
-    "description": "MTA:SA Lua Syntax Highlighting + Companion",
-    "version": "2.4.0",
+    "description": "MTA:SA Lua Syntax Highlighting + Companion (MTALua => Lua)",
+    "version": "2.4.0-custom",
     "publisher": "subtixx",
     "license": "GPL v3.0",
     "icon": "images/logo.png",
@@ -92,18 +92,14 @@
         ],
         "languages": [
             {
-                "id": "mtalua",
-                "aliases": [
-                    "MTA Lua",
-                    "mtalua"
-                ],
+                "id": "lua",
                 "extensions": [
                     ".lua"
                 ],
                 "configuration": "./language-configuration.json"
             },
             {
-                "id": "mtaluatypes",
+                "id": "luatypes",
                 "aliases": [],
                 "extensions": [
                     ".luarioeughiuer"
@@ -113,14 +109,14 @@
         ],
         "grammars": [
             {
-                "language": "mtalua",
+                "language": "lua",
                 "scopeName": "source.lua",
                 "path": "./syntaxes/mtalua.tmLanguage.json"
             },
             {
-                "language": "mtaluatypes",
+                "language": "luatypes",
                 "scopeName": "source.luatypes",
-                "path": "./syntaxes/mtaluatypes.tmLanguage.json"
+                "path": "./syntaxes/luatypes.tmLanguage.json"
             }
         ],
         "themes": [

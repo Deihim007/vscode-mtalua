@@ -13,7 +13,7 @@ export enum CallType {
 }
 
 export function restartResourceSave(doc: vscode.TextDocument) {
-    if (doc.languageId == "mtalua")
+    if (doc.languageId == "lua")
         restartResource(doc.uri);
 }
 

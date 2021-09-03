@@ -31,16 +31,16 @@ export function activate(context: vscode.ExtensionContext) {
 	// TODO: Write a CompletionItemProvider/SignatureHelpProvider/HoverProvider for meta.xml files. See https://github.com/Subtixx/vscode-mtalua/issues/10
 
 	if (vscode.workspace.getConfiguration("mtalua-sense").get("show_reference_links", false))
-		vscode.languages.registerDocumentLinkProvider({ scheme: "file", language: "mtalua" }, new documentLinkProvider(context.extensionPath));
+		vscode.languages.registerDocumentLinkProvider({ scheme: "file", language: "lua" }, new documentLinkProvider(context.extensionPath));
 
 	// Register the built-in function definitions
-	vscode.languages.registerCompletionItemProvider({ scheme: "file", language: "mtalua" }, new functionProvider(context.extensionPath), ".");
-	vscode.languages.registerHoverProvider({ scheme: "file", language: "mtalua" }, new hoverProvider(context.extensionPath));
+	vscode.languages.registerCompletionItemProvider({ scheme: "file", language: "lua" }, new functionProvider(context.extensionPath), ".");
+	vscode.languages.registerHoverProvider({ scheme: "file", language: "lua" }, new hoverProvider(context.extensionPath));
 
 	if (!vscode.workspace.getConfiguration("mtalua-sense").get("activate_signature_help_parentheses", true))
-		vscode.languages.registerSignatureHelpProvider({ scheme: "file", language: "mtalua" }, new signatureProvider(context.extensionPath), "");
+		vscode.languages.registerSignatureHelpProvider({ scheme: "file", language: "lua" }, new signatureProvider(context.extensionPath), "");
 	else
-		vscode.languages.registerSignatureHelpProvider({ scheme: "file", language: "mtalua" }, new signatureProvider(context.extensionPath), "(");
+		vscode.languages.registerSignatureHelpProvider({ scheme: "file", language: "lua" }, new signatureProvider(context.extensionPath), "(");
 }
 
 export function deactivate() {
